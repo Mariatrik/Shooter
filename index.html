@@ -221,8 +221,8 @@ body {
 			var enemy = greenEnemies.getFirstExists(false);
 			if (enemy) {
 			enemy.reset(game.width, game.rnd.integerInRange(0, game.height));
-			enemy.body.velocity.x = game.rnd.integerInRange(-300, 300);
-			enemy.body.velocity.y = ENEMY_SPEED;
+			enemy.body.velocity.y = game.rnd.integerInRange(-300, 300);
+			enemy.body.velocity.x =-ENEMY_SPEED;
 			enemy.body.drag.x = 100;
 			enemy.trail.start(false, 800, 1);
 				//  Update function for each enemy ship to update rotation etc
@@ -231,8 +231,8 @@ body {
 		        enemy.trail.x = enemy.x;
           		enemy.trail.y = enemy.y -10;
 				//  Kill enemies once they go off screen
-         		if (enemy.y > game.height + 200) {
-           		enemy.kill();
+         		if (enemy.x==0) {
+           			enemy.kill();
           		}
        			 }
 		}
