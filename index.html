@@ -205,6 +205,7 @@ body {
 					bullet.body.velocity.y += player.body.velocity.y;
 
 					bulletTimer = game.time.now + BULLET_SPACING;
+					firesound=game.add.audio('lazer');
 					firesound.play();
 				}
 			}
