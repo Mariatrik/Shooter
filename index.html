@@ -34,6 +34,7 @@ body {
 		var fireButton;
 		var bulletTimer = 0;
 		var firesound;
+		var music;
 		
 
 		var ACCLERATION = 600;
@@ -58,6 +59,8 @@ body {
 
 		function create() {
 			
+			music=game.add.audio('music');
+			music.play('','0,1','true');
 			game.scale.pageAlignHorizontally = true;
 			
 			//  The scrolling starfield background
