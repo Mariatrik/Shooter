@@ -33,6 +33,7 @@ body {
 		var bullets;
 		var fireButton;
 		var bulletTimer = 0;
+		var firesound;
 		
 
 		var ACCLERATION = 600;
@@ -51,6 +52,8 @@ body {
 			game.load.image('bullet', 'assets/bullets/bullet.png');
 			game.load.image('enemy-green', '/assets/enemy2.png');
 			game.load.spritesheet('explosion', '/assets/explode.png', 128, 128);
+			game.load.audio('lazer','/assets/lazer.wav');
+			game.load.audio('music','assets/score.mp3);
 		}
 
 		function create() {
